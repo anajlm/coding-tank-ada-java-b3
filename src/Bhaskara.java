@@ -17,12 +17,19 @@ public class Bhaskara {
         double delta = Math.pow(b,2) - 4*a*c;
         System.out.println("o delta é igual a " + delta);
 
-        double sqrtDelta = Math.sqrt(delta);
+        if (delta == 0){
+            double x = -b / (2*a);
+        System.out.println("Só existe uma raiz X que é " + x);
+        } else if (delta < 0){
+            System.out.println("Não existem raízes reais");
+        } else {
+            double sqrtDelta = Math.sqrt(delta);
 
-        double x1 = (-b + sqrtDelta)/(2*a);
-        System.out.println("X1 é igual a " + x1);
-        double x2 = (-b - sqrtDelta)/(2*a);
-        System.out.println("X2 é igual a " + x2);
+            double x1 = (-b + sqrtDelta) / (2 * a);
+            System.out.println("X1 é igual a " + x1);
+            double x2 = (-b - sqrtDelta) / (2 * a);
+            System.out.println("X2 é igual a " + x2);
+        }
 
     }
 }

@@ -6,7 +6,8 @@ public class Calculadora {
         System.out.println("Qual operação deseja fazer? ( opções: + - / * )");
         String operacao = entrada.nextLine();
 
-        int a[] = {0, 0};
+        int a[];
+        a = new int[2];
 
         switch (operacao) {
             case "+":
@@ -37,7 +38,8 @@ public class Calculadora {
     }
 
     private static int[] getTwoNumbers(){
-        int a[] = {0, 0};
+        int a[];
+        a = new int[2];
         Scanner entrada = new Scanner(System.in);
         System.out.println("Informe o primeiro número.");
         a[0] = entrada.nextInt();
